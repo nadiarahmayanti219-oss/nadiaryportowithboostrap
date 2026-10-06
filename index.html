@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Nadia Rahmayanti | Portfolio</title>
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* ================= COLORS ================= */
+
+:root {
+    --brown: #6b4f43;
+    --brown-dark: #3e2d27;
+    --cream: #f5f1e8;
+    --cream-dark: #ebe4d8;
+    --white: #fffdf8;
+    --dark: #2b211c;
+    --shadow: rgba(107,79,67,.22);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--dark);
+    font-family: 'Jost', sans-serif;
+    overflow-x: hidden;
+}
+
+h1,h2,h3,.brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+}
+
+section {
+    padding: 90px 0;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    background: var(--cream) !important;
+    border-bottom: 1px solid rgba(107,79,67,.12);
+    box-shadow: 0 8px 24px rgba(62,45,39,.08);
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+    backdrop-filter: blur(10px);
+}
+
+.brand {
+    color: var(--brown) !important;
+    font-size: 1.7rem;
+    font-style: italic;
+}
+
+.nav-link {
+    color: var(--brown) !important;
+    font-weight: 500;
+    margin-left: 8px;
+    padding: 10px 15px !important;
+    border-radius: 50px;
+    transition: .3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background: var(--brown);
+    color: var(--cream) !important;
+    transform: translateY(-2px);
+}
+
+.navbar-toggler {
+    border-color: var(--brown);
+}
+
+
+/* ================= HERO ================= */
+
+#beranda {
+    background: var(--cream);
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-title {
+    color: var(--brown);
+    font-size: clamp(3.5rem,8vw,7rem);
+    line-height: .9;
+}
+
+.hero-small,
+.section-subtitle {
+    color: var(--brown);
+    font-size: .8rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.hero-text {
+    max-width: 600px;
+    line-height: 1.8;
+}
+
+
+/* ================= FOTO ================= */
+
+.foto,
+.quote-photo {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+
+    box-shadow:
+        10px 12px 0 var(--cream-dark),
+        0 18px 35px var(--shadow);
+
+    transition: .5s ease;
+}
+
+.foto:hover,
+.quote-photo:hover {
+    transform: translateY(-8px) scale(1.015);
+
+    box-shadow:
+        15px 17px 0 var(--cream-dark),
+        0 25px 45px rgba(107,79,67,.30);
+}
+
+
+/* ================= BUTTON ================= */
+
+.btn-custom {
+    background: var(--brown);
+    color: var(--cream);
+    border: 0;
+    border-radius: 50px;
+    padding: 12px 28px;
+    transition: .3s;
+}
+
+.btn-custom:hover {
+    background: var(--brown-dark);
+    color: white;
+    transform: translateY(-3px);
+}
+
+
+/* ================= ABOUT ================= */
+
+#tentang {
+    background: var(--brown);
+    color: var(--cream);
+}
+
+#tentang .section-title,
+#tentang .section-subtitle {
+    color: var(--cream);
+}
+
+#tentang .about-text {
+    line-height: 1.9;
+}
+
+
+/* ================= SKILLS ================= */
+
+.skills-section {
+    background: var(--cream);
+}
+
+.skills-section .section-title {
+    color: var(--brown);
+}
+
+.skill-box {
+    background: var(--brown);
+    color: var(--cream);
+    padding: 25px 15px;
+    border-radius: 20px;
+    text-align: center;
+
+    font-family: 'Cormorant Garamond',serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+
+    box-shadow: 0 12px 25px var(--shadow);
+    transition: .4s;
+}
+
+.skill-box:hover {
+    transform: translateY(-12px) scale(1.06) rotate(-1deg);
+    box-shadow: 0 20px 35px rgba(107,79,67,.30);
+}
+
+.skill-icon {
+    display: block;
+    margin-top: 5px;
+    font-family: 'Jost',sans-serif;
+    font-size: .7rem;
+    letter-spacing: 2px;
+    opacity: .75;
+}
+
+
+/* ================= QUOTE ================= */
+
+.quote-section {
+    background: var(--brown);
+    color: var(--cream);
+}
+
+.quote-photo {
+    height: 380px;
+}
+
+.quote-small {
+    color: var(--cream-dark);
+    letter-spacing: 3px;
+    font-size: .8rem;
+    text-transform: uppercase;
+}
+
+.quote {
+    color: var(--cream);
+    font-family: 'Cormorant Garamond',serif;
+    font-size: clamp(2.4rem,4.5vw,4.2rem);
+    font-style: italic;
+    line-height: 1.05;
+    margin: 0;
+}
+
+
+/* ================= PORTFOLIO ================= */
+
+#portofolio {
+    background: var(--cream);
+}
+
+.section-title {
+    color: var(--brown);
+    font-size: clamp(2.7rem,5vw,4.5rem);
+}
+
+.card {
+    border: 0;
+    border-radius: 20px;
+    overflow: hidden;
+    background: var(--white);
+    box-shadow: 0 12px 30px var(--shadow);
+    transition: .4s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 22px 45px rgba(107,79,67,.28);
+}
+
+.card img {
+    height: 220px;
+    width: 100%;
+    object-fit: cover;
+    transition: .5s;
+}
+
+.card:hover img {
+    transform: scale(1.05);
+}
+
+.card-title {
+    color: var(--brown);
+    font-family: 'Cormorant Garamond',serif;
+    font-size: 1.8rem;
+}
+
+
+/* ================= FUN FACTS ================= */
+
+.fun-facts {
+    background: var(--brown);
+    color: var(--cream);
+}
+
+.fun-facts .section-title,
+.fun-facts .section-subtitle {
+    color: var(--cream);
+}
+
+.fun-photo {
+    min-height: 380px;
+    background: url('images/foto_ke4.jpeg') center top/cover no-repeat;
+    border-radius: 25px;
+
+    box-shadow:
+        10px 12px 0 var(--cream-dark),
+        0 20px 40px rgba(43,33,28,.30);
+
+    transition: .5s;
+}
+
+.fun-photo:hover {
+    transform: translateY(-8px);
+}
+
+.fact-item {
+    padding: 18px 0;
+    border-bottom: 1px solid rgba(245,241,232,.2);
+}
+
+.fact-label {
+    font-size: .7rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--cream-dark);
+}
+
+.fact-value {
+    font-family: 'Cormorant Garamond',serif;
+    font-size: 1.8rem;
+}
+
+
+/* ================= CONTACT ================= */
+
+#kontak {
+    background: var(--cream);
+}
+
+.contact-box {
+    background: var(--white);
+    padding: 50px;
+    border-radius: 25px;
+    box-shadow: 0 15px 40px var(--shadow);
+}
+
+.form-control {
+    border: 0;
+    border-bottom: 1px solid rgba(107,79,67,.3);
+    border-radius: 0;
+    background: transparent;
+    padding: 15px 5px;
+    box-shadow: none !important;
+}
+
+.form-control:focus {
+    border-bottom-color: var(--brown);
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: var(--brown-dark);
+    color: var(--cream);
+    text-align: center;
+    padding: 30px;
+}
+
+
+/* ================= ANIMATION ================= */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(35px);
+    transition: .8s ease;
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.pop-up {
+    opacity: 0;
+    transform: scale(.88) translateY(20px);
+    transition: .7s cubic-bezier(.2,.8,.2,1);
+}
+
+.pop-up.show {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width:768px) {
+
+    section {
+        padding: 65px 0;
+    }
+
+    .hero-title {
+        font-size: 4rem;
+    }
+
+    .contact-box {
+        padding: 30px;
+    }
+
+    .quote-photo {
+        height: 300px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar navbar-expand-lg">
+<div class="container">
+
+<a class="navbar-brand brand" href="#beranda">
+    nanad's profile
+</a>
+
+<button class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav">
+
+    <span class="navbar-toggler-icon"></span>
+
+</button>
+
+<div class="collapse navbar-collapse" id="navbarNav">
+
+<ul class="navbar-nav ms-auto">
+
+<li class="nav-item">
+<a class="nav-link active" href="#beranda">Beranda</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#tentang">Tentang</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#portofolio">Portofolio</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#kontak">Kontak</a>
+</li>
+
+</ul>
+
+</div>
+</div>
+</nav>
+
+
+<!-- ================= HERO ================= -->
+
+<header id="beranda">
+
+<div class="container">
+<div class="row align-items-center g-5">
+
+<div class="col-lg-6 reveal">
+
+<p class="hero-small">
+Welcome to my little space
+</p>
+
+<h1 class="hero-title">
+Nadia<br>Rahmayanti
+</h1>
+
+<p class="hero-text mt-4">
+Hi, I’m Nadia! 👋<br>
+A tech student who loves creativity, communication,
+and exploring new ideas. I’m always excited to learn,
+create, and grow along the way. ✨
+</p>
+
+<a href="#tentang" class="btn btn-custom mt-3">
+Get to know me
+</a>
+
+</div>
+
+
+<div class="col-lg-6">
+
+<div class="row g-4">
+
+<div class="col-6 pop-up">
+<img src="images/foto_pertama.jpeg"
+     class="foto"
+     alt="Foto Nadia">
+</div>
+
+<div class="col-6 pop-up mt-5">
+<img src="images/foto_kedua.jpeg"
+     class="foto"
+     alt="Foto Nadia">
+</div>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</header>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section id="tentang">
+
+<div class="container">
+<div class="row align-items-center g-5">
+
+<div class="col-lg-5 reveal">
+<img src="images/foto_ketiga.jpeg"
+     class="foto"
+     alt="About Nadia">
+</div>
+
+<div class="col-lg-7 reveal">
+
+<p class="section-subtitle">
+A little introduction
+</p>
+
+<h2 class="section-title">
+A Glimpse of Me
+</h2>
+
+<p class="about-text">
+I’m a curious learner who loves exploring new ideas,
+discovering new things, and turning inspiration into
+something creative.
+
+I believe every experience is a chance to grow,
+create, and make something meaningful. ✨
+</p>
+
+</div>
+
+</div>
+</div>
+
+</section>
+
+
+<!-- ================= SKILLS ================= -->
+
+<section class="skills-section">
+
+<div class="container">
+
+<div class="text-center mb-5 reveal">
+
+<p class="section-subtitle">
+Things I enjoy learning
+</p>
+
+<h2 class="section-title">
+My Skills
+</h2>
+
+</div>
+
+
+<div class="row g-4">
+
+<div class="col-6 col-md">
+<div class="skill-box pop-up">
+HTML
+<span class="skill-icon">Structure</span>
+</div>
+</div>
+
+<div class="col-6 col-md">
+<div class="skill-box pop-up">
+CSS
+<span class="skill-icon">Style</span>
+</div>
+</div>
+
+<div class="col-6 col-md">
+<div class="skill-box pop-up">
+Bootstrap
+<span class="skill-icon">Framework</span>
+</div>
+</div>
+
+<div class="col-6 col-md">
+<div class="skill-box pop-up">
+JavaScript
+<span class="skill-icon">Interaction</span>
+</div>
+</div>
+
+<div class="col-6 col-md">
+<div class="skill-box pop-up">
+Git
+<span class="skill-icon">Version Control</span>
+</div>
+</div>
+
+</div>
+</div>
+
+</section>
+
+
+<!-- ================= QUOTE + FOTO ================= -->
+
+<section class="quote-section">
+
+<div class="container">
+
+<div class="row align-items-center g-5">
+
+<div class="col-lg-5 reveal">
+
+<img src="images/foto_ke4.jpeg"
+     class="quote-photo"
+     alt="Nadia">
+
+</div>
+
+<div class="col-lg-7 reveal">
+
+<p class="quote-small">
+A little reminder
+</p>
+
+<p class="quote">
+“Selalu belajar, selalu bertumbuh,
+dan selalu menemukan cara baru
+untuk menciptakan sesuatu.”
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= PORTFOLIO ================= -->
+
+<section id="portofolio">
+
+<div class="container">
+
+<div class="text-center reveal">
+
+<p class="section-subtitle">
+A few things I've made
+</p>
+
+<h2 class="section-title">
+My Portfolio
+</h2>
+
+</div>
+
+
+<div class="row g-4 mt-4">
+
+<div class="col-md-4">
+<div class="card h-100 pop-up">
+
+<img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=800&q=80"
+     alt="Website Kampus">
+
+<div class="card-body p-4">
+
+<h3 class="card-title">
+Website Kampus
+</h3>
+
+<p>
+Website sederhana dengan tampilan
+bersih dan informatif.
+</p>
+
+</div>
+</div>
+</div>
+
+
+<div class="col-md-4">
+<div class="card h-100 pop-up">
+
+<img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80"
+     alt="Toko Online">
+
+<div class="card-body p-4">
+
+<h3 class="card-title">
+Toko Online
+</h3>
+
+<p>
+Eksplorasi desain website e-commerce
+yang sederhana dan modern.
+</p>
+
+</div>
+</div>
+</div>
+
+
+<div class="col-md-4">
+<div class="card h-100 pop-up">
+
+<img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=800&q=80"
+     alt="Blog Pribadi">
+
+<div class="card-body p-4">
+
+<h3 class="card-title">
+Blog Pribadi
+</h3>
+
+<p>
+Tempat untuk berbagi cerita,
+ide, dan hal-hal menarik.
+</p>
+
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= FUN FACTS ================= -->
+
+<section class="fun-facts">
+
+<div class="container">
+
+<div class="row align-items-center g-5">
+
+<div class="col-lg-6 reveal">
+
+<div class="fun-photo"></div>
+
+</div>
+
+
+<div class="col-lg-6 reveal">
+
+<p class="section-subtitle">
+Just a few random things
+</p>
+
+<h2 class="section-title">
+Fun Facts
+</h2>
+
+<div class="fact-item">
+<div class="fact-label">Favorite Place</div>
+<div class="fact-value">Germany 🇩🇪</div>
+</div>
+
+<div class="fact-item">
+<div class="fact-label">Favorite Drink</div>
+<div class="fact-value">Jasmine Milk Tea 🧋</div>
+</div>
+
+<div class="fact-item">
+<div class="fact-label">Hobby</div>
+<div class="fact-value">UI Design 🎨</div>
+</div>
+
+<div class="fact-item">
+<div class="fact-label">Currently Watching</div>
+<div class="fact-value">Movies 🎬</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section id="kontak">
+
+<div class="container">
+
+<div class="contact-box reveal">
+
+<div class="text-center mb-5">
+
+<p class="section-subtitle">
+Say hello
+</p>
+
+<h2 class="section-title">
+Let's Connect
+</h2>
+
+</div>
+
+
+<form>
+
+<div class="row g-4">
+
+<div class="col-md-6">
+<input type="text"
+       class="form-control"
+       placeholder="Your Name"
+       required>
+</div>
+
+<div class="col-md-6">
+<input type="email"
+       class="form-control"
+       placeholder="Your Email"
+       required>
+</div>
+
+<div class="col-12">
+<textarea class="form-control"
+          rows="4"
+          placeholder="Your Message"
+          required></textarea>
+</div>
+
+<div class="col-12 text-center">
+
+<button type="button"
+        class="btn-custom"
+        id="send"
+        data-bs-toggle="modal"
+        data-bs-target="#successModal">
+
+Send Message ✨
+
+</button>
+
+</div>
+
+</div>
+
+</form>
+
+</div>
+</div>
+
+</section>
+
+
+<!-- ================= MODAL ================= -->
+
+<div class="modal fade" id="successModal" tabindex="-1">
+
+<div class="modal-dialog modal-dialog-centered">
+
+<div class="modal-content"
+     style="border:0;border-radius:25px;background:#fffdf8;">
+
+<div class="modal-body text-center p-5">
+
+<h2 class="section-title">
+Thank You! ✨
+</h2>
+
+<p>
+Pesan kamu sudah siap dikirim.
+Terima kasih sudah mampir ke website Nadia!
+</p>
+
+<button class="btn-custom"
+        data-bs-dismiss="modal">
+Close
+</button>
+
+</div>
+
+</div>
+</div>
+</div>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+© 2026 Nadia Rahmayanti
+<br>
+
+<span style="opacity:.7">
+Made with curiosity & creativity ✨
+</span>
+
+</footer>
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+document.getElementById('send').onclick = () => {
+    document.querySelector('form').reset();
+};
+
+
+/* Scroll Animation */
+
+const items = document.querySelectorAll('.reveal, .pop-up');
+
+const observer = new IntersectionObserver(entries => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+            entry.target.classList.add('show');
+
+            observer.unobserve(entry.target);
+
+        }
+
+    });
+
+}, { threshold: .12 });
+
+
+items.forEach(item => observer.observe(item));
+
+
+/* Active Navbar */
+
+const sections = document.querySelectorAll('header[id], section[id]');
+const links = document.querySelectorAll('.nav-link');
+
+const navObserver = new IntersectionObserver(entries => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+            links.forEach(link =>
+                link.classList.remove('active')
+            );
+
+            const active =
+                document.querySelector(
+                    `.nav-link[href="#${entry.target.id}"]`
+                );
+
+            if (active)
+                active.classList.add('active');
+
+        }
+
+    });
+
+}, {
+    rootMargin: '-35% 0px -55% 0px'
+});
+
+
+sections.forEach(section =>
+    navObserver.observe(section)
+);
+
+</script>
+
+</body>
+</html>
